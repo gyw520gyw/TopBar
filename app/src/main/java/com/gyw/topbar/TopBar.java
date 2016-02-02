@@ -94,6 +94,7 @@ public class TopBar extends RelativeLayout implements View.OnClickListener {
 		ButterKnife.bind(this);
 	}
 
+	// 初始化页面，根据设置项显示
 	private void initView() {
 
 		mTitleTv.setTextSize(centerTextSize);
@@ -117,6 +118,7 @@ public class TopBar extends RelativeLayout implements View.OnClickListener {
 		showWarn();
 	}
 
+	//是否显示提醒
 	private void showWarn() {
 		if (isShowWarn) {
 			mWarn.setImageResource(warnSrc);

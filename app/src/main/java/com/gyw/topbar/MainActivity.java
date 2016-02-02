@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        // 设置左边按钮点击事件
         mTopBar.setOnTopBarLeftClickListener(new TopBar.OnTopBarLeftClickListener() {
             @Override
             public void onTopBarLeftClick() {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 设置右边按钮点击事件
         mTopBar.setOnTopBarRightClickListener(new TopBar.OnTopBarRightClickListener() {
             @Override
             public void onTopBarRightClick() {
