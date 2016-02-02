@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:g="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gyw.topbar.MainActivity">
+
+    <com.gyw.topbar.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        g:rightSrc="@drawable/topbar_share_selector"
+        g:isShowRight="true"
+        g:leftSrc="@drawable/topbar_back_selector"
+        g:isShowLeft="true"
+        g:centerText="首页"/>
+</RelativeLayout>
