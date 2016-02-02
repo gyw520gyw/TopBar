@@ -10,7 +10,7 @@
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ff0000"
+        android:background="@color/colorPrimary"
         g:rightSrc="@drawable/topbar_share_selector"
         g:isShowRight="true"
         g:leftSrc="@drawable/topbar_back_selector"
