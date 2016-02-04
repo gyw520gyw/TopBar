@@ -51,9 +51,8 @@ public class TopBar extends RelativeLayout implements View.OnClickListener {
 
 	private View mView;
 
-	private OnTopBarRightClickListener rightListener;
+	private OnTopBarClickListener listener;
 
-	private OnTopBarLeftClickListener leftListener;
 
 	public TopBar(Context context) {
 		this(context, null);
@@ -137,36 +136,29 @@ public class TopBar extends RelativeLayout implements View.OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.iv_top_bar_left:
-			if (leftListener != null) {
-				leftListener.onTopBarLeftClick();
+			if (listener != null) {
+				listener.onTopBarLeftClick(v);
 			}
 			break;
 
 		case R.id.iv_top_bar_right:
-			if (rightListener != null) {
-				rightListener.onTopBarRightClick();
+			if (listener != null) {
+				listener.onTopBarRightClick(v);
 			}
 			break;
 		}
 	}
 
-	public void setOnTopBarRightClickListener(OnTopBarRightClickListener rightListener) {
-		this.rightListener = rightListener;
+	public void setOnTopBarClickListener(OnTopBarClickListener listener) {
+		this.listener = listener;
 	}
 
-	public void setOnTopBarLeftClickListener(OnTopBarLeftClickListener leftListener) {
-		this.leftListener = leftListener;
+	interface OnTopBarClickListener {
+		void onTopBarRightClick(View v);
+		void onTopBarLeftClick(View v);
 	}
 
-	interface OnTopBarRightClickListener {
-		void onTopBarRightClick();
-	}
 
-	interface OnTopBarLeftClickListener {
-		void onTopBarLeftClick();
-	}
-
-	
 	public boolean isShowWarn() {
 		return isShowWarn;
 	}

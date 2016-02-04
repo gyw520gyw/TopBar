@@ -2,6 +2,7 @@ package com.gyw.topbar;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import butterknife.Bind;
@@ -18,20 +19,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        // 设置左边按钮点击事件
-        mTopBar.setOnTopBarLeftClickListener(new TopBar.OnTopBarLeftClickListener() {
+        mTopBar.setOnTopBarClickListener(new TopBar.OnTopBarClickListener() {
             @Override
-            public void onTopBarLeftClick() {
+            public void onTopBarRightClick(View v) {
+                Toast.makeText(MainActivity.this, "点击右边分享", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onTopBarLeftClick(View v) {
                 Toast.makeText(MainActivity.this, "点击左边返回", Toast.LENGTH_SHORT).show();
             }
         });
 
-        // 设置右边按钮点击事件
-        mTopBar.setOnTopBarRightClickListener(new TopBar.OnTopBarRightClickListener() {
-            @Override
-            public void onTopBarRightClick() {
-                Toast.makeText(MainActivity.this, "点击右边分享", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }
