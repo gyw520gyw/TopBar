@@ -17,5 +17,4 @@
         <attr name="centerTextSize" format="dimension"></attr>
         <attr name="centerTextColor" format="color"></attr>
     </declare-styleable>
-
 </resources>

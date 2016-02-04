@@ -27,7 +27,7 @@ public class TopBar extends RelativeLayout implements View.OnClickListener {
 	@Bind(R.id.tv_top_bar_title)
 	TextView mTitleTv;
 
-	// 最右边的图片
+	// 右边的图片
 	@Bind(R.id.iv_top_bar_right)
 	ImageView mRightIv;
 
